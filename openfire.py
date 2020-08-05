@@ -44,6 +44,20 @@ try:
                             discordMessage("Noteable: potential "+line+" at "+str(service['ip_str']))
                         except:
                                 pass
+                final = ".".join(parts[:-1])
+                query = line+" http.title:\"Openfire Admin Console\""
+                print("Trying "+line)
+                try:
+                        result = api.search(query)
+                except:
+                        pass
+                
+                for service in result['matches']:
+                        ips.append(str(service['ip_str']))
+                        try:
+                            discordMessage("Noteable: potential "+line+" at "+str(service['ip_str']))
+                        except:
+                                pass
                 if len(final.strip()) < 3:
                         pass
                 else:
