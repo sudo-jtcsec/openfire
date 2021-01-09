@@ -11,7 +11,7 @@ def discordMessage(text):
 
 
 # Configuration
-API_KEY = "W5aeOynZRxJG2TO1AGPykKY5sqZPjcIv"
+API_KEY = ""
 
 
 
